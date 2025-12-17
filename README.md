@@ -4,9 +4,7 @@
 <br>**Let's learn the InDesign SDK together.**
 
 We cannot be held responsible for any issues arising from your use of this service.<br>
-Please use it at your own risk.<br>
-
-If you have any desired features, please post them in the discussions.
+Please use it at your own risk.
 ## extendScript for JavaScript
 ```
 // In the Layout Window, if the Shift key is pressed when the right-click menu is invoked,
