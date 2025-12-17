@@ -16,7 +16,6 @@
 #include "KESSARMPUMID.h"
 #include "KESSARMPUMDynamicMenu.h"
 #include "KESSARMPUMScriptProvider.h"
-//#include "KESSARMPUMMenuFilter.h"
 
 // CREATE_PMINTERFACE
 CREATE_PMINTERFACE(KESSARMPUMScriptProvider, kKESSARMPUMScriptProviderImpl)
@@ -41,12 +40,6 @@ ErrorCode KESSARMPUMScriptProvider::HandleMethod(
 		case e_KESSARMPUMClearShiftRtMouseMenu:
 			status = this->ClearShiftRtMouseMenu();
 			break;
-
-		/*
-		case e_KESSARMPUMQueryDefaultMenuItem:
-			status = this->QueryDefaultMenuItem();
-			break;
-		*/
 
 		default:
 			status = CScriptProvider::HandleMethod(scriptID, iScriptRequestData, iScript_parent);
@@ -208,21 +201,3 @@ void KESSARMPUMScriptProvider::SetActionID(
 		}
 	}
 }
-
-/*
-// Query DefaultMenuItem. Installation PlugIn first onry
-ErrorCode KESSARMPUMScriptProvider::QueryDefaultMenuItem()
-{
-	PMString pMString_result;
-	for (ActionID actionID : KESSARMPUMMenuFilter::vector_ActionID_DefaultRtMouse)
-	{
-		PMString pMString_num;
-		pMString_num.AsNumber(actionID.Get());
-		pMString_result.Append(pMString_num);
-		pMString_result.Append("\n");
-	}
-	CAlert::InformationAlert(pMString_result);
-
-	return kSuccess;
-}
-*/

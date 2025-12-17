@@ -110,17 +110,6 @@ resource ClassDescriptionTable(kSDKDefClassDescriptionTableResourceID)
 		},
 	},
 
-	Class
-	{
-		kKESSARMPUMMenuFilterBoss,
-		kInvalidClass,
-		{
-			IID_IMENUFILTER, kKESSARMPUMMenuFilterImpl,
-			IID_IK2SERVICEPROVIDER, kMenuFilterProviderImpl,
-			IID_IPMPERSIST, kPMPersistImpl,
-		}
-	},
-
 	AddIn
 	{
 		kSessionBoss,
