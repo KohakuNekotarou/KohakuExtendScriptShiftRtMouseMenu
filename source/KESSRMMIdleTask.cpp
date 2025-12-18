@@ -110,7 +110,21 @@ void KESSRMMIdleTask::MenuCustomization(
 		int32 int32_i = 0;
 		for (ActionID actionID : vector_ActionID_ShiftMenuItem)
 		{
-			iMenuManager->RemoveMenuItem(vector_PMString_ShiftMenuPath[int32_i], actionID);
+			PMString pMString_Path = vector_PMString_ShiftMenuPath[int32_i];
+
+			if (actionID != kInvalidActionID)
+			{
+				
+				if (pMString_Path.Contains(":") == kFalse // Not sub menu menuItem
+					|| pMString_Path == pMString_targetMenuName + ":-") // Separator for not SubMenu
+				{
+					iMenuManager->RemoveMenuItem(pMString_Path, actionID);
+				}	
+			}
+			else // if (actionID != kInvalidActionID)
+			{
+				iMenuManager->RemoveSubmenuAndChildren(pMString_Path);
+			}
 			int32_i++;
 		}
 		iMenuManager->RemoveMenuItem(pMString_targetMenuName + ":-", kKESSRMMSeparatorActionID); // Separator

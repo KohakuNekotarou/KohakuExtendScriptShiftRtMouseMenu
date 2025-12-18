@@ -196,6 +196,11 @@ void KESSRMMScriptProvider::SetActionID(
 		// Not found or actionID kInvalidActionID
 		if (result == vector_ActionID_MenuItem.end() || actionID == kInvalidActionID)
 		{
+			if (actionID == kInvalidActionID && // SubMenu or Separator
+				pMString_MenuPath.Contains(":-", pMString_MenuPath.CharCount() - 2)) // :- to mark an item as a separator.
+			{
+				actionID = kKESSRMMSeparatorActionID;
+			}
 			vector_ActionID_MenuItem.push_back(actionID);
 			vector_PMString_MenuPath.push_back(pMString_MenuPath);
 		}
