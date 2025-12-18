@@ -110,21 +110,25 @@ void KESSRMMIdleTask::MenuCustomization(
 		int32 int32_i = 0;
 		for (ActionID actionID : vector_ActionID_ShiftMenuItem)
 		{
-			PMString pMString_Path = vector_PMString_ShiftMenuPath[int32_i];
+			PMString pMString_MenuPath = vector_PMString_ShiftMenuPath[int32_i];
 
-			if (actionID != kInvalidActionID)
+			if (actionID != kInvalidActionID) // MenuItem
 			{
 				
-				if (pMString_Path.Contains(":") == kFalse // Not sub menu menuItem
-					|| pMString_Path == pMString_targetMenuName + ":-") // Separator for not SubMenu
+				if (pMString_MenuPath.Contains(":") == kFalse // Not sub menu menuItem
+					|| pMString_MenuPath == pMString_targetMenuName + ":-") // Separator for not SubMenu
 				{
-					iMenuManager->RemoveMenuItem(pMString_Path, actionID);
+					iMenuManager->RemoveMenuItem(pMString_MenuPath, actionID);
 				}	
 			}
-			else // if (actionID != kInvalidActionID)
+			else // SubMenu
 			{
-				iMenuManager->RemoveSubmenuAndChildren(pMString_Path);
+				WideString wideString_MenuPath(pMString_MenuPath);
+				int32 int32_removeCount = wideString_MenuPath.Strip(':'); // use ''
+				if(int32_removeCount == 2)
+					iMenuManager->RemoveSubmenuAndChildren(pMString_MenuPath); // First level sub menu
 			}
+
 			int32_i++;
 		}
 		iMenuManager->RemoveMenuItem(pMString_targetMenuName + ":-", kKESSRMMSeparatorActionID); // Separator
