@@ -17,16 +17,16 @@ var shiftRtMouseArray = [
 	["RtMouseDefault", 268],
 	["RtMouseDefault:-", 0], // Separator
 	["RtMouseDefault:MySubMenu:", 0], // SubMenu need ':'
-	["RtMouseDefault:MySubMenu", 137304],
+	["RtMouseDefault:MySubMenu", 38657],
 
 	// RtMouseLayout
-	["RtMouseLayout", 38657],
+	["RtMouseLayout", 268],
 
 	// RtMouseText
-	["RtMouseText", 38659],
+	["RtMouseText", 268],
 
 	// RtMouseTable
-	["RtMouseTable", 267]
+	["RtMouseTable", 268]
 ];
 
 app.kessrmmClearShiftRtMouseMenu();
