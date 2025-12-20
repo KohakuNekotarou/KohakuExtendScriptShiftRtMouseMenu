@@ -20,19 +20,18 @@ Please execute.<br>
 var shiftRtMouseArray = [
 
 	// RtMouseDefault
-	["RtMouseDefault", app.menuActions.item("$ID/E&xit").id],
-	["RtMouseDefault:-", 0], // Separator
+	//["RtMouseDefault:-", 0], // Separator
 	["RtMouseDefault:MySubMenu:", 0], // SubMenu need ':'
-	["RtMouseDefault:MySubMenu", app.menuActions.item("$ID/&About Shuksan...").id],
+	["RtMouseDefault:MySubMenu", 268],
 
 	// RtMouseLayout
-	["RtMouseLayout", app.menuActions.item("$ID/E&xit").id],
+	["RtMouseLayout", 268],
 
 	// RtMouseText
-	["RtMouseText", app.menuActions.item("$ID/E&xit").id],
+	["RtMouseText", 268],
 
 	// RtMouseTable
-	["RtMouseTable", app.menuActions.item("$ID/E&xit").id]
+	["RtMouseTable", 268]
 ];
 
 app.kessrmmClearShiftRtMouseMenu();
