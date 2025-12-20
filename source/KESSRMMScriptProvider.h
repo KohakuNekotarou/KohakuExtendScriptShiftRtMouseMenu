@@ -20,11 +20,12 @@ public:
 	virtual ErrorCode HandleMethod(
 		ScriptID scriptID, IScriptRequestData* iScriptRequestData, IScript* iScript_parent) override;
 
+	static ErrorCode ClearShiftRtMouseMenu();
+
 private:
 	ErrorCode SetShiftRtMouseMenu(
 		ScriptID scriptID, IScriptRequestData* iScriptRequestData, IScript* iScript_parent);
 
-	ErrorCode ClearShiftRtMouseMenu();
 
 	void AddActionAndMenu(ActionID actionID, PMString menuPath);
 
@@ -36,5 +37,12 @@ private:
 		PMString pMString_MenuPath
 	);
 
-	//ErrorCode QueryDefaultMenuItem();
+	ErrorCode IsDefaultMenuItem(
+		ScriptID scriptID, IScriptRequestData* iScriptRequestData, IScript* iScript_parent);
+
+	ErrorCode IsDefaultSubMenu(
+		ScriptID scriptID, IScriptRequestData* iScriptRequestData, IScript* iScript_parent);
+
+	int32 IsExistDefaultSubMenu(
+		std::vector<PMString> vector_PMString_DefaultSubMenuPath, PMString pMString_SubMenuPath);
 };

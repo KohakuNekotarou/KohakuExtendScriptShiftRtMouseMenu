@@ -110,6 +110,16 @@ resource ClassDescriptionTable(kSDKDefClassDescriptionTableResourceID)
 		},
 	},
 
+	Class
+	{
+		kKESSRMMStartupShutdownBoss,
+		kInvalidClass,
+		{
+			IID_ISTARTUPSHUTDOWN, kKESSRMMStartupShutdownImpl,
+			IID_IK2SERVICEPROVIDER, kLazyStartupShutdownProviderImpl,
+		}
+	}
+
 	AddIn
 	{
 		kSessionBoss,
@@ -285,9 +295,21 @@ resource VersionedScriptElementInfo(2)
 				// app.kessrmmClearShiftRtMouseMenu();
 				Method{ kKESSRMMClearShiftRtMouseMenuMethodScriptElement },
 
-				// QueryDefaultMenuItem
-				// app.kessrmmQueryDefaultMenuItem();
-				// Method{ kKESSRMMQueryDefaultMenuItemMethodScriptElement },
+				// ---------------------------------------------------------------------------------------
+				Object{ kMenuItemObjectScriptElement },
+
+				// IsDefaultMenuItem
+				// menu = app.menus.item("$ID/RtMouseDefault");
+				// menu.menuItems[0].kessrmmIsDefaultMenuItem("RtMouseDefault");
+				Method{ kKESSRMMIsDefaultMenuItemMethodScriptElement },
+
+				// ---------------------------------------------------------------------------------------
+				Object{ kSubmenuObjectScriptElement },
+
+				// IsDefaultMenuItem
+				// menu = app.menus.item("$ID/RtMouseDefault");
+				// menu.submenus[0].kessrmmIsDefaultSubMenu("RtMouseDefault");
+				Method{ kKESSRMMIsDefaultSubMenuMethodScriptElement },
 			}
 		}
 
@@ -324,18 +346,37 @@ resource VersionedScriptElementInfo(2)
 			}
 		}
 
-		/*
 		Method
 		{
-			kKESSRMMQueryDefaultMenuItemMethodScriptElement,
-			e_KESSRMMQueryDefaultMenuItem,
-			"KESSRMM query default menu item",
-			"KESSRMM query default menu item.",
+			kKESSRMMIsDefaultMenuItemMethodScriptElement,
+			e_KESSRMMIsDefaultMenuItem,
+			"KESSRMM is default menu item",
+			"KESSRMM is default menu item.",
 			VoidType,
 			{
+				p_KESSRMMTargetMenuString, // Parameter's ScriptID.
+				"KESSRMM target menu string", // Parameter's name.
+				"KESSRMM target menu string.", // Parameter's description.
+				StringType, // Parameter's type.
+				kRequired, // kOptional or kRequired.
 			}
 		}
-		*/
+
+		Method
+		{
+			kKESSRMMIsDefaultSubMenuMethodScriptElement,
+			e_KESSRMMIsDefaultSubMenu,
+			"KESSRMM is default sub menu",
+			"KESSRMM is default sub menu.",
+			VoidType,
+			{
+				p_KESSRMMTargetMenuString, // Parameter's ScriptID.
+				"KESSRMM target menu string", // Parameter's name.
+				"KESSRMM target menu string.", // Parameter's description.
+				StringType, // Parameter's type.
+				kRequired, // kOptional or kRequired.
+			}
+		}
 	}
 };
 

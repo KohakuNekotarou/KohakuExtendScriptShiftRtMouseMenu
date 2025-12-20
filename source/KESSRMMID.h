@@ -51,6 +51,7 @@ DECLARE_PMID(kPlugInIDSpace, kKESSRMMPluginID, kKESSRMMPrefix + 0)
 // ClassIDs:
 DECLARE_PMID(kClassIDSpace, kKESSRMMScriptProviderBoss, kKESSRMMPrefix + 0)
 DECLARE_PMID(kClassIDSpace, kKESSRMMActionComponentBoss, kKESSRMMPrefix + 1)
+DECLARE_PMID(kClassIDSpace, kKESSRMMStartupShutdownBoss, kKESSRMMPrefix + 2)
 
 // InterfaceIDs:
 DECLARE_PMID(kInterfaceIDSpace, IID_IKESSRMMIDLETASK, kKESSRMMPrefix + 0)
@@ -60,6 +61,7 @@ DECLARE_PMID(kImplementationIDSpace, kKESSRMMScriptProviderImpl, kKESSRMMPrefix 
 DECLARE_PMID(kImplementationIDSpace, kKESSRMMDynamicMenuImpl, kKESSRMMPrefix + 1)
 DECLARE_PMID(kImplementationIDSpace, kKESSRMMActionComponentImpl, kKESSRMMPrefix + 2)
 DECLARE_PMID(kImplementationIDSpace, kKESSRMMIdleTaskImpl, kKESSRMMPrefix + 3)
+DECLARE_PMID(kImplementationIDSpace, kKESSRMMStartupShutdownImpl, kKESSRMMPrefix + 4)
 
 // ActionIDs:
 DECLARE_PMID(kActionIDSpace, kKESSRMMRtMouseDefaultDynMnuPlaceholderActionID, kKESSRMMPrefix + 0)
@@ -74,6 +76,8 @@ DECLARE_PMID(kActionIDSpace, kKESSRMMSeparatorActionID, kKESSRMMPrefix + 4)
 //Script Element IDs
 DECLARE_PMID(kScriptInfoIDSpace, kKESSRMMSetShiftRtMouseMenuMethodScriptElement, kKESSRMMPrefix + 0)
 DECLARE_PMID(kScriptInfoIDSpace, kKESSRMMClearShiftRtMouseMenuMethodScriptElement, kKESSRMMPrefix + 1)
+DECLARE_PMID(kScriptInfoIDSpace, kKESSRMMIsDefaultMenuItemMethodScriptElement, kKESSRMMPrefix + 2)
+DECLARE_PMID(kScriptInfoIDSpace, kKESSRMMIsDefaultSubMenuMethodScriptElement, kKESSRMMPrefix + 3)
 
 // "About Plug-ins" sub-menu:
 #define kKESSRMMAboutMenuKey			kKESSRMMStringPrefix "kKESSRMMAboutMenuKey"

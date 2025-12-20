@@ -40,10 +40,10 @@ std::vector<ActionID> KESSRMMDynamicMenu::vector_ActionID_RtMouseDefaultMenuItem
 	13313
 };
 std::vector<PMString> KESSRMMDynamicMenu::vector_PMString_RtMouseDefaultSubMenuPath = {
-	"RtMouseDefault:Display Performance:",
-	"RtMouseDefault:Writing Direction:",
-	"RtMouseDefault:Grids && Guides:",
-	"RtMouseDefault:SelectObjectMenu:"
+	"Display Performance",
+	"Writing Direction",
+	"Grids && Guides",
+	"SelectObjectMenu"
 };
 
 // RtMouseLayout
@@ -86,28 +86,27 @@ std::vector<ActionID> KESSRMMDynamicMenu::vector_ActionID_RtMouseLayoutMenuItem 
 	78815
 };
 std::vector<PMString> KESSRMMDynamicMenu::vector_PMString_RtMouseLayoutSubMenuPath = {
-	"RtMouseLayout:TagFramePopup:",
-	"RtMouseLayout:Display Performance:",
-	"RtMouseLayout:Anchored Object Menu:",
-	"RtMouseLayout:#EditWithApp:",
-	"RtMouseLayout:#CaptionSubmenu:",
-	"RtMouseLayout:Hyperlinks:",
-	"RtMouseLayout:InteractiveContextMenu:",
-	"RtMouseLayout:kInCopyMenu:",
-	"RtMouseLayout:kInCopyMenu:Add to Assignment:",
-	"RtMouseLayout:ObjectEffects:",
-	"RtMouseLayout:kCollaborationMenu:",
-	"RtMouseLayout:kCollaborationMenu:kAssignTo:",
-	"RtMouseLayout:Frame Type:",
-	"RtMouseLayout:Zoom:",
-	"RtMouseLayout:Tran&sform:",
-	"RtMouseLayout:&Transform Again:",
-	"RtMouseLayout:&Arrange:",
-	"RtMouseLayout:SelectObjectMenu:",
-	"RtMouseLayout:Stroke Weight:",
-	"RtMouseLayout:Fitting:",
-	"RtMouseLayout:&Content:",
-	"RtMouseLayout:CaptureFromSelection:"
+	"TagFramePopup",
+	"Display Performance",
+	"Anchored Object Menu",
+	"#EditWithApp",
+	"#CaptionSubmenu",
+	"Hyperlinks",
+	"InteractiveContextMenu",
+	"kInCopyMenu",
+	"ObjectEffects",
+	"kCollaborationMenu",
+	"Frame Type",
+	"Zoom",
+	"Tran&sform",
+	"&Transform Again",
+	"&Arrange",
+	"SelectObjectMenu",
+	"Stroke Weight",
+	"Fitting",
+	"&Content",
+	"CaptureFromSelection",
+	"&Graphic" // ?
 };
 
 // RtMouseText
@@ -158,34 +157,27 @@ std::vector<ActionID> KESSRMMDynamicMenu::vector_ActionID_RtMouseTextMenuItem = 
 	137113
 };
 std::vector<PMString> KESSRMMDynamicMenu::vector_PMString_RtMouseTextSubMenuPath = {
-	"RtMouseText:TagTextPopup:",
-	"RtMouseText:&Font:",
-	"RtMouseText:Size:",
-	"RtMouseText:SpellingMenu:",
-	"RtMouseText:Path T&ype:",
-	"RtMouseText:Ruby:",
-	"RtMouseText:Kenten:",
-	"RtMouseText:kTablesMenuInsert_&:",
-	"RtMouseText:kTablesMenuDelete_&:",
-	"RtMouseText:kTablesMenuSelect_&:",
-	"RtMouseText:Anchored Object Menu:",
-	"RtMouseText:Hyperlinks:",
-	"RtMouseText:InteractiveContextMenu:",
-	"RtMouseText:kInCopyMenu:",
-	"RtMouseText:kInCopyMenu:Add to Assignment:",
-	"RtMouseText:kCollaborationMenu:",
-	"RtMouseText:kCollaborationMenu:kAssignTo:",
-	"RtMouseText:Writing Direction:",
-	"RtMouseText:CCase Menu:",
-	"RtMouseText:Insert Break Menu:",
-	"RtMouseText:Insert Special Character:",
-	"RtMouseText:Insert Special Character:SpecialSymbols:",
-	"RtMouseText:Insert Special Character:SpecialMarkers:",
-	"RtMouseText:Insert Special Character:SpecialHyphensDashes:",
-	"RtMouseText:Insert Special Character:SpecialQuotes:",
-	"RtMouseText:Insert Special Character:SpecialOther:",
-	"RtMouseText:Insert White Space:",
-	"RtMouseText:Insert Variable:"
+	"TagTextPopup",
+	"&Font",
+	"Size",
+	"SpellingMenu",
+	"Path T&ype",
+	"Ruby",
+	"Kenten",
+	"kTablesMenuInsert_&",
+	"kTablesMenuDelete_&",
+	"kTablesMenuSelect_&",
+	"Anchored Object Menu",
+	"Hyperlinks",
+	"InteractiveContextMenu",
+	"kInCopyMenu",
+	"kCollaborationMenu",
+	"Writing Direction",
+	"CCase Menu",
+	"Insert Break Menu",
+	"Insert Special Character",
+	"Insert White Space",
+	"Insert Variable"
 };
 
 // RtMouseTable
@@ -210,14 +202,14 @@ std::vector<ActionID> KESSRMMDynamicMenu::vector_ActionID_RtMouseTableMenuItem =
 	78636
 };
 std::vector<PMString> KESSRMMDynamicMenu::vector_PMString_RtMouseTableSubMenuPath = {
-	"RtMouseTable:Rotate:",
-	"RtMouseTable:kTablesMenuTable Options_&:",
-	"RtMouseTable:kTablesMenuCell Options_&:",
-	"RtMouseTable:kTablesMenuInsert_&:",
-	"RtMouseTable:kTablesMenuDelete_&:",
-	"RtMouseTable:kTablesMenuSelect_&:",
-	"RtMouseTable:Writing Direction:",
-	"RtMouseTable:kInCopyMenu:"
+	"Rotate",
+	"kTablesMenuTable Options_&",
+	"kTablesMenuCell Options_&",
+	"kTablesMenuInsert_&",
+	"kTablesMenuDelete_&",
+	"kTablesMenuSelect_&",
+	"Writing Direction",
+	"kInCopyMenu"
 };
 
 // ShiftRtMouseDefault
@@ -236,6 +228,12 @@ std::vector<PMString> KESSRMMDynamicMenu::vector_PMString_ShiftRtMouseTextMenuPa
 std::vector<ActionID> KESSRMMDynamicMenu::vector_ActionID_ShiftRtMouseTableMenu = {};
 std::vector<PMString> KESSRMMDynamicMenu::vector_PMString_ShiftRtMouseTableMenuPath = {};
 
+// MenuAddFlg
+bool16 KESSRMMDynamicMenu::bool16_ShiftRtMouseDefaultMenuAddedFlg = kFalse;
+bool16 KESSRMMDynamicMenu::bool16_ShiftRtMouseLayoutMenuAddedFlg = kFalse;
+bool16 KESSRMMDynamicMenu::bool16_ShiftRtMouseTextMenuAddedFlg = kFalse;
+bool16 KESSRMMDynamicMenu::bool16_ShiftRtMouseTableMenuAddedFlg = kFalse;
+
 // Constructor
 KESSRMMDynamicMenu::KESSRMMDynamicMenu(IPMUnknown *boss) :
 	CPMUnknown<IDynamicMenu>(boss) 
@@ -245,20 +243,22 @@ KESSRMMDynamicMenu::KESSRMMDynamicMenu(IPMUnknown *boss) :
 // RebuildMenu
 void KESSRMMDynamicMenu::RebuildMenu(ActionID dynamicActionID, IPMUnknown* widget)
 {
-	do {
-		if (IsShiftKeyPressed() == kFalse) break; // IsShiftKeyPressed
 
+	if (IsShiftKeyPressed())
+	{
 		// ---------------------------------------------------------------------------------------
 		// Add task
 		// Insert an idle task before opening modal dialog to prevent the program from stopping.
 		InterfacePtr<IIdleTask> iIdleTask(GetExecutionContextSession(), IID_IKESSRMMIDLETASK);
-		if (iIdleTask == nil) break;
-
-		InterfacePtr<IIdleTaskMgr> idleTaskMgr(GetExecutionContextSession(), ::UseDefaultIID());
-		if (idleTaskMgr == nil) break;
-
-		idleTaskMgr->RemoveTask(iIdleTask); // RemoveTask
-		idleTaskMgr->AddTask(iIdleTask, 0); // AddTask
+		if (iIdleTask)
+		{
+			InterfacePtr<IIdleTaskMgr> idleTaskMgr(GetExecutionContextSession(), ::UseDefaultIID());
+			if (idleTaskMgr)
+			{
+				idleTaskMgr->RemoveTask(iIdleTask); // RemoveTask
+				idleTaskMgr->AddTask(iIdleTask, 0); // AddTask
+			}
+		}
 
 		// ---------------------------------------------------------------------------------------
 		// MenuCustomization
@@ -268,7 +268,7 @@ void KESSRMMDynamicMenu::RebuildMenu(ActionID dynamicActionID, IPMUnknown* widge
 			{
 				KESSRMMDynamicMenu::enum_PopUpMenuName = KESSRMMDynamicMenu::kKESSRMMRtMouseDefault;
 
-				this->MenuCustomization(
+				this->ShiftMenuCustomization(
 					KESSRMMDynamicMenu::vector_ActionID_RtMouseDefaultMenuItem,
 					KESSRMMDynamicMenu::vector_PMString_RtMouseDefaultSubMenuPath,
 					KESSRMMDynamicMenu::vector_ActionID_ShiftRtMouseDefaultMenu,
@@ -281,7 +281,7 @@ void KESSRMMDynamicMenu::RebuildMenu(ActionID dynamicActionID, IPMUnknown* widge
 			{
 				KESSRMMDynamicMenu::enum_PopUpMenuName = KESSRMMDynamicMenu::kKESSRMMRtMouseLayout;
 
-				this->MenuCustomization(
+				this->ShiftMenuCustomization(
 					KESSRMMDynamicMenu::vector_ActionID_RtMouseLayoutMenuItem,
 					KESSRMMDynamicMenu::vector_PMString_RtMouseLayoutSubMenuPath,
 					KESSRMMDynamicMenu::vector_ActionID_ShiftRtMouseLayoutMenu,
@@ -292,9 +292,9 @@ void KESSRMMDynamicMenu::RebuildMenu(ActionID dynamicActionID, IPMUnknown* widge
 			}
 			case kKESSRMMRtMouseTextDynMnuPlaceholderActionID: // RtMouseText
 			{
-				KESSRMMDynamicMenu::enum_PopUpMenuName = KESSRMMDynamicMenu::kKESSRMMRtMouseText;
+				KESSRMMDynamicMenu::enum_PopUpMenuName = KESSRMMDynamicMenu::kKESSRMMRtMouseTable;
 
-				this->MenuCustomization(
+				this->ShiftMenuCustomization(
 					KESSRMMDynamicMenu::vector_ActionID_RtMouseTextMenuItem,
 					KESSRMMDynamicMenu::vector_PMString_RtMouseTextSubMenuPath,
 					KESSRMMDynamicMenu::vector_ActionID_ShiftRtMouseTextMenu,
@@ -305,9 +305,9 @@ void KESSRMMDynamicMenu::RebuildMenu(ActionID dynamicActionID, IPMUnknown* widge
 			}
 			case kKESSRMMRtMouseTableDynMnuPlaceholderActionID: // RtMouseTable
 			{
-				KESSRMMDynamicMenu::enum_PopUpMenuName = KESSRMMDynamicMenu::kKESSRMMRtMouseTable;
+				KESSRMMDynamicMenu::enum_PopUpMenuName = KESSRMMDynamicMenu::kKESSRMMRtMouseText;
 
-				this->MenuCustomization(
+				this->ShiftMenuCustomization(
 					KESSRMMDynamicMenu::vector_ActionID_RtMouseTableMenuItem,
 					KESSRMMDynamicMenu::vector_PMString_RtMouseTableSubMenuPath,
 					KESSRMMDynamicMenu::vector_ActionID_ShiftRtMouseTableMenu,
@@ -316,11 +316,122 @@ void KESSRMMDynamicMenu::RebuildMenu(ActionID dynamicActionID, IPMUnknown* widge
 				);
 				break;
 			}
+		} // end switch
+	}
+	else
+	{
+		switch (dynamicActionID.Get())
+		{
+			case kKESSRMMRtMouseDefaultDynMnuPlaceholderActionID: // RtMouseDefault
+			{
+				this->MenuCustomization(
+					KESSRMMDynamicMenu::vector_ActionID_ShiftRtMouseDefaultMenu,
+					KESSRMMDynamicMenu::vector_PMString_ShiftRtMouseDefaultMenuPath,
+					"RtMouseDefault"
+				);
+				break;
+			}
+			case kKESSRMMRtMouseLayoutDynMnuPlaceholderActionID: // RtMouseLayout
+			{
+				this->MenuCustomization(
+					KESSRMMDynamicMenu::vector_ActionID_ShiftRtMouseLayoutMenu,
+					KESSRMMDynamicMenu::vector_PMString_ShiftRtMouseLayoutMenuPath,
+					"RtMouseLayout"
+				);
+				break;
+			}
+			case kKESSRMMRtMouseTextDynMnuPlaceholderActionID: // RtMouseText
+			{
+				this->MenuCustomization(
+					KESSRMMDynamicMenu::vector_ActionID_ShiftRtMouseTextMenu,
+					KESSRMMDynamicMenu::vector_PMString_ShiftRtMouseTextMenuPath,
+					"RtMouseText"
+				);
+				break;
+			}
+			case kKESSRMMRtMouseTableDynMnuPlaceholderActionID: // RtMouseTable
+			{
+				this->MenuCustomization(
+					KESSRMMDynamicMenu::vector_ActionID_ShiftRtMouseTableMenu,
+					KESSRMMDynamicMenu::vector_PMString_ShiftRtMouseTableMenuPath,
+					"RtMouseTable"
+				);
+				break;
+			}
+		} // end switch
+	}
+}
+
+void KESSRMMDynamicMenu::MenuCustomization(
+	std::vector<ActionID> vector_ActionID_ShiftMenuItem,
+	std::vector<PMString> vector_PMString_ShiftMenuPath,
+	PMString pMString_targetMenuName)
+{
+	do {
+		// ---------------------------------------------------------------------------------------
+		// Remove
+		bool16 bool16_RemoveFlg = kFalse;
+		if (pMString_targetMenuName == "RtMouseDefault"
+			&& KESSRMMDynamicMenu::bool16_ShiftRtMouseDefaultMenuAddedFlg == kTrue)
+		{
+			KESSRMMDynamicMenu::bool16_ShiftRtMouseDefaultMenuAddedFlg = kFalse;
+			bool16_RemoveFlg = kTrue;
+		}
+		else if (pMString_targetMenuName == "RtMouseLayout"
+			&& KESSRMMDynamicMenu::bool16_ShiftRtMouseLayoutMenuAddedFlg == kTrue)
+		{
+			KESSRMMDynamicMenu::bool16_ShiftRtMouseLayoutMenuAddedFlg = kFalse;
+			bool16_RemoveFlg = kTrue;
+		}
+		else if (pMString_targetMenuName == "RtMouseText"
+			&& KESSRMMDynamicMenu::bool16_ShiftRtMouseTextMenuAddedFlg == kTrue)
+		{
+			KESSRMMDynamicMenu::bool16_ShiftRtMouseTextMenuAddedFlg = kFalse;
+			bool16_RemoveFlg = kTrue;
+		}
+		else if (pMString_targetMenuName == "RtMouseTable"
+			&& KESSRMMDynamicMenu::bool16_ShiftRtMouseTableMenuAddedFlg == kTrue)
+		{
+			KESSRMMDynamicMenu::bool16_ShiftRtMouseTableMenuAddedFlg = kFalse;
+			bool16_RemoveFlg = kTrue;
+		}
+
+		if (bool16_RemoveFlg == kTrue)
+		{
+			InterfacePtr<IApplication> iApplication(::GetExecutionContextSession()->QueryApplication());
+			InterfacePtr<IActionManager> iActionManager(iApplication->QueryActionManager());
+			InterfacePtr<IMenuManager> iMenuManager(iActionManager, ::UseDefaultIID());
+
+			int32 int32_i = 0;
+			for (ActionID actionID : vector_ActionID_ShiftMenuItem)
+			{
+				PMString pMString_MenuPath = vector_PMString_ShiftMenuPath[int32_i];
+
+				if (actionID != kInvalidActionID) // MenuItem
+				{
+
+					if (pMString_MenuPath.Contains(":") == kFalse // Not sub menu menuItem
+						|| pMString_MenuPath == pMString_targetMenuName + ":-") // Separator for not SubMenu
+					{
+						iMenuManager->RemoveMenuItem(pMString_MenuPath, actionID);
+					}
+				}
+				else // SubMenu
+				{
+					WideString wideString_MenuPath(pMString_MenuPath);
+					int32 int32_removeCount = wideString_MenuPath.Strip(':'); // use ''
+					if (int32_removeCount == 2)
+						iMenuManager->RemoveSubmenuAndChildren(pMString_MenuPath); // First level sub menu
+				}
+
+				int32_i++;
+			}
+			iMenuManager->RemoveMenuItem(pMString_targetMenuName + ":-", kKESSRMMSeparatorActionID); // Separator
 		}
 	} while (false);
 }
 
-void KESSRMMDynamicMenu::MenuCustomization(
+void KESSRMMDynamicMenu::ShiftMenuCustomization(
 	std::vector<ActionID> vector_ActionID_Default,
 	std::vector<PMString> vector_PMString_DefaultSubMenuPath,
 	std::vector<ActionID> vector_ActionID_ShiftMenuItem,
@@ -330,33 +441,60 @@ void KESSRMMDynamicMenu::MenuCustomization(
 	do {
 		// ---------------------------------------------------------------------------------------
 		// Add
-		InterfacePtr<IApplication> iApplication(::GetExecutionContextSession()->QueryApplication());
-		InterfacePtr<IActionManager> iActionManager(iApplication->QueryActionManager());
-		InterfacePtr<IMenuManager> iMenuManager(iActionManager, ::UseDefaultIID());
-
-		int32 int32_i = 0;
-		for (ActionID actionID : vector_ActionID_ShiftMenuItem)
+		bool16 bool16_AddFlg = kFalse;
+		if (pMString_targetMenuName == "RtMouseDefault"
+			&& KESSRMMDynamicMenu::bool16_ShiftRtMouseDefaultMenuAddedFlg == kFalse)
 		{
-			PMString pMString_Path = vector_PMString_ShiftMenuPath[int32_i];
-			
+			KESSRMMDynamicMenu::bool16_ShiftRtMouseDefaultMenuAddedFlg = kTrue;
+			bool16_AddFlg = kTrue;
+		}
+		else if (pMString_targetMenuName == "RtMouseLayout"
+			&& KESSRMMDynamicMenu::bool16_ShiftRtMouseLayoutMenuAddedFlg == kFalse)
+		{
+			KESSRMMDynamicMenu::bool16_ShiftRtMouseLayoutMenuAddedFlg = kTrue;
+			bool16_AddFlg = kTrue;
+		}
+		else if (pMString_targetMenuName == "RtMouseText"
+			&& KESSRMMDynamicMenu::bool16_ShiftRtMouseTextMenuAddedFlg == kFalse)
+		{
+			KESSRMMDynamicMenu::bool16_ShiftRtMouseTextMenuAddedFlg = kTrue;
+			bool16_AddFlg = kTrue;
+		}
+		else if (pMString_targetMenuName == "RtMouseTable"
+			&& KESSRMMDynamicMenu::bool16_ShiftRtMouseTableMenuAddedFlg == kFalse)
+		{
+			KESSRMMDynamicMenu::bool16_ShiftRtMouseTableMenuAddedFlg = kTrue;
+			bool16_AddFlg = kTrue;
+		}
+
+		if (bool16_AddFlg == kTrue)
+		{
+			InterfacePtr<IApplication> iApplication(::GetExecutionContextSession()->QueryApplication());
+			InterfacePtr<IActionManager> iActionManager(iApplication->QueryActionManager());
+			InterfacePtr<IMenuManager> iMenuManager(iActionManager, ::UseDefaultIID());
+
+			int32 int32_i = 0;
+			for (ActionID actionID : vector_ActionID_ShiftMenuItem)
+			{
+				iMenuManager->AddMenuItem(
+					actionID, // Action ID
+					vector_PMString_ShiftMenuPath[int32_i], // Menu path
+					int32_i, // Menu position
+					kSDKDefIsNotDynamicMenuFlag
+				);
+
+				int32_i++;
+			} // end for
+
+			// Separator
 			iMenuManager->AddMenuItem(
-				actionID, // Action ID
-				pMString_Path, // Menu path
-				int32_i, // Menu position
+				kKESSRMMSeparatorActionID,
+				pMString_targetMenuName + ":-",
+				int32_i,
 				kSDKDefIsNotDynamicMenuFlag
 			);
-
-			int32_i++;
-		} // end for
-
-		// Separator
-		iMenuManager->AddMenuItem(
-			kKESSRMMSeparatorActionID,
-			pMString_targetMenuName + ":-",
-			int32_i,
-			kSDKDefIsNotDynamicMenuFlag
-		);
-
+		}
+		
 		// ---------------------------------------------------------------------------------------
 		// Hide
 		InterfacePtr<ICommand> iCommand(CmdUtils::CreateCommand(kSetMenuCustomizationPrefsCmdBoss));
@@ -371,8 +509,7 @@ void KESSRMMDynamicMenu::MenuCustomization(
 		// SubMenu
 		for (PMString pMString_menuPath : vector_PMString_DefaultSubMenuPath)
 		{
-			// Remove ":"
-			pMString_menuPath.Remove(pMString_menuPath.CharCount() - 1, 1);
+			pMString_menuPath = pMString_targetMenuName + ":" + pMString_menuPath;
 			iMenuCustomizationData->HideSubMenu(pMString_menuPath);
 		}
 

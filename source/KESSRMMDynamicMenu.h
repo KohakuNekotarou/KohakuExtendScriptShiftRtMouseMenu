@@ -18,7 +18,7 @@ public:
 		kKESSRMMRtMouseDefault = 1,
 		kKESSRMMRtMouseLayout = 2,
 		kKESSRMMRtMouseText = 3,
-		kKESSRMMRtMouseTable = 4
+		kKESSRMMRtMouseTable = 4,
 	} KESSRMMPopUpMenuName;
 
 	KESSRMMDynamicMenu(IPMUnknown* boss);
@@ -26,6 +26,11 @@ public:
 	void RebuildMenu(ActionID dynamicActionID, IPMUnknown* widget) override;
 
 	void MenuCustomization(
+		std::vector<ActionID> vector_ActionID_ShiftMenuItem,
+		std::vector<PMString> vector_PMString_ShiftMenuPath,
+		PMString pMString_targetMenuName);
+
+	void ShiftMenuCustomization(
 		std::vector<ActionID> vector_ActionID_Default,
 		std::vector<PMString> vector_PMString_DefaultSubMenuPath,
 		std::vector<ActionID> vector_ActionID_ShiftMenuItem,
@@ -66,4 +71,10 @@ public:
 	// ShiftRtMouseText
 	static std::vector<ActionID> vector_ActionID_ShiftRtMouseTableMenu;
 	static std::vector<PMString> vector_PMString_ShiftRtMouseTableMenuPath;
+	
+	// MenuAddFlg
+	static bool16 bool16_ShiftRtMouseDefaultMenuAddedFlg;
+	static bool16 bool16_ShiftRtMouseLayoutMenuAddedFlg;
+	static bool16 bool16_ShiftRtMouseTextMenuAddedFlg;
+	static bool16 bool16_ShiftRtMouseTableMenuAddedFlg;
 };

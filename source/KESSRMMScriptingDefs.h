@@ -36,7 +36,8 @@ enum KESSRMMScriptEvents
 {
 	e_KESSRMMSetShiftRtMouseMenu = 'KSSM',
 	e_KESSRMMClearShiftRtMouseMenu = 'KCSM',
-	//e_KESSRMMQueryDefaultMenuItem = 'KQDM',
+	e_KESSRMMIsDefaultMenuItem = 'KISM',
+	e_KESSRMMIsDefaultSubMenu = 'KIDS',
 };
 
 // Property IDs

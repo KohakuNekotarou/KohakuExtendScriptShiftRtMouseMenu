@@ -27,8 +27,6 @@ private:
 	void MenuCustomization(
 		std::vector<ActionID> vector_ActionID_Default,
 		std::vector<PMString> vector_PMString_DefaultSubMenuPath,
-		std::vector<ActionID> vector_ActionID_ShiftMenuItem,
-		std::vector<PMString> vector_PMString_ShiftMenuPath,
 		PMString pMString_targetMenuName);
 };
 
@@ -48,8 +46,6 @@ uint32 KESSRMMIdleTask::RunTask(uint32 appFlags, IdleTimer* timeCheck)
 			this->MenuCustomization(
 				KESSRMMDynamicMenu::vector_ActionID_RtMouseDefaultMenuItem,
 				KESSRMMDynamicMenu::vector_PMString_RtMouseDefaultSubMenuPath,
-				KESSRMMDynamicMenu::vector_ActionID_ShiftRtMouseDefaultMenu,
-				KESSRMMDynamicMenu::vector_PMString_ShiftRtMouseDefaultMenuPath,
 				"RtMouseDefault"
 			);
 			break;
@@ -59,8 +55,6 @@ uint32 KESSRMMIdleTask::RunTask(uint32 appFlags, IdleTimer* timeCheck)
 			this->MenuCustomization(
 				KESSRMMDynamicMenu::vector_ActionID_RtMouseLayoutMenuItem,
 				KESSRMMDynamicMenu::vector_PMString_RtMouseLayoutSubMenuPath,
-				KESSRMMDynamicMenu::vector_ActionID_ShiftRtMouseLayoutMenu,
-				KESSRMMDynamicMenu::vector_PMString_ShiftRtMouseLayoutMenuPath,
 				"RtMouseLayout"
 			);
 			break;
@@ -70,8 +64,6 @@ uint32 KESSRMMIdleTask::RunTask(uint32 appFlags, IdleTimer* timeCheck)
 			this->MenuCustomization(
 				KESSRMMDynamicMenu::vector_ActionID_RtMouseTextMenuItem,
 				KESSRMMDynamicMenu::vector_PMString_RtMouseTextSubMenuPath,
-				KESSRMMDynamicMenu::vector_ActionID_ShiftRtMouseTextMenu,
-				KESSRMMDynamicMenu::vector_PMString_ShiftRtMouseTextMenuPath,
 				"RtMouseText"
 			);
 			break;
@@ -81,8 +73,6 @@ uint32 KESSRMMIdleTask::RunTask(uint32 appFlags, IdleTimer* timeCheck)
 			this->MenuCustomization(
 				KESSRMMDynamicMenu::vector_ActionID_RtMouseTableMenuItem,
 				KESSRMMDynamicMenu::vector_PMString_RtMouseTableSubMenuPath,
-				KESSRMMDynamicMenu::vector_ActionID_ShiftRtMouseTableMenu,
-				KESSRMMDynamicMenu::vector_PMString_ShiftRtMouseTableMenuPath,
 				"RtMouseTable"
 			);
 			break;
@@ -96,43 +86,9 @@ uint32 KESSRMMIdleTask::RunTask(uint32 appFlags, IdleTimer* timeCheck)
 void KESSRMMIdleTask::MenuCustomization(
 	std::vector<ActionID> vector_ActionID_Default,
 	std::vector<PMString> vector_PMString_DefaultSubMenuPath,
-	std::vector<ActionID> vector_ActionID_ShiftMenuItem,
-	std::vector<PMString> vector_PMString_ShiftMenuPath,
 	PMString pMString_targetMenuName)
 {
 	do {
-		// ---------------------------------------------------------------------------------------
-		// Remove
-		InterfacePtr<IApplication> iApplication(::GetExecutionContextSession()->QueryApplication());
-		InterfacePtr<IActionManager> iActionManager(iApplication->QueryActionManager());
-		InterfacePtr<IMenuManager> iMenuManager(iActionManager, ::UseDefaultIID());
-
-		int32 int32_i = 0;
-		for (ActionID actionID : vector_ActionID_ShiftMenuItem)
-		{
-			PMString pMString_MenuPath = vector_PMString_ShiftMenuPath[int32_i];
-
-			if (actionID != kInvalidActionID) // MenuItem
-			{
-				
-				if (pMString_MenuPath.Contains(":") == kFalse // Not sub menu menuItem
-					|| pMString_MenuPath == pMString_targetMenuName + ":-") // Separator for not SubMenu
-				{
-					iMenuManager->RemoveMenuItem(pMString_MenuPath, actionID);
-				}	
-			}
-			else // SubMenu
-			{
-				WideString wideString_MenuPath(pMString_MenuPath);
-				int32 int32_removeCount = wideString_MenuPath.Strip(':'); // use ''
-				if(int32_removeCount == 2)
-					iMenuManager->RemoveSubmenuAndChildren(pMString_MenuPath); // First level sub menu
-			}
-
-			int32_i++;
-		}
-		iMenuManager->RemoveMenuItem(pMString_targetMenuName + ":-", kKESSRMMSeparatorActionID); // Separator
-
 		// ---------------------------------------------------------------------------------------
 		// Show
 		InterfacePtr<ICommand> iCommand(CmdUtils::CreateCommand(kSetMenuCustomizationPrefsCmdBoss));
@@ -147,8 +103,7 @@ void KESSRMMIdleTask::MenuCustomization(
 		// SubMenu
 		for (PMString pMString_menuPath : vector_PMString_DefaultSubMenuPath)
 		{
-			// Remove ":"
-			pMString_menuPath.Remove(pMString_menuPath.CharCount() - 1, 1);
+			pMString_menuPath = pMString_targetMenuName + ":" + pMString_menuPath;
 			iMenuCustomizationData->ShowSubMenu(pMString_menuPath);
 		}
 
